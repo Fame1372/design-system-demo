@@ -24,9 +24,18 @@
         "@semantic-release/changelog",
         "@semantic-release/github",
         "@semantic-release/npm",
-        "@semantic-release/git"
+        "@semantic-release/git",
+
+        ["@semantic-release/github", {
+            "assets": [
+                { "path": "dist/asset.min.css", "label": "CSS distribution" },
+                { "path": "dist/asset.min.js", "label": "JS distribution" }
+            ]
+        }]
     ],
-    "branches": ["main", "next"],
+    "release": {
+        "branches": ["master", "next"]
+    },
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
