@@ -26,6 +26,9 @@
         "@semantic-release/npm",
         "@semantic-release/git"
     ],
+    "release": {
+        "branches": ["master", "next"]
+    },
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
